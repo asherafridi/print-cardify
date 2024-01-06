@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CARD Print</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <div class="main row">
+      <div class="col-md-3 sidebar p-2 px-4">
+        <div class="brand"><h2>Card Print</h2></div>
+        <div class="form-group mt-5">
+          <label for="front-image" class="form-label">Front Image</label>
+          <input
+            type="file"
+            class="form-control"
+            id="front-image"
+            accept="image/*"
+          />
+        </div>
+        <div class="form-group mt-4">
+          <label for="back-image" class="form-label">Back Image</label>
+          <input
+            type="file"
+            class="form-control"
+            id="back-image"
+            accept="image/*"
+          />
+        </div>
+        <div class="form-group mt-4">
+          <label for="copy" class="form-label">Number of Copies</label>
+          <input
+            type="number"
+            value="1"
+            class="form-control"
+            id="copy"
+            max="10"
+            min="1"
+          />
+        </div>
+        <div class="form-group mt-4">
+          <button class="btn btn-primary" onclick="generate()">
+            Generate Copies
+          </button>
+        </div>
+        <div class="form-group mt-4">
+          <button class="btn btn-primary" onclick="printFront()">Print</button>
+        </div>
+        <div class="form-group mt-5">
+          <button class="btn btn-success mt-5" onclick="flipPage()">
+            Flip Page
+          </button>
+        </div>
+      </div>
+      <div class="front-side active">
+        <div class="plate">
+          <div class="card" data-card="1"></div>
+          <div class="card" data-card="2"></div>
+        </div>
+        <div class="plate">
+          <div class="card" data-card="3"></div>
+          <div class="card" data-card="4"></div>
+        </div>
+        <div class="plate">
+          <div class="card" data-card="5"></div>
+          <div class="card" data-card="6"></div>
+        </div>
+        <div class="plate">
+          <div class="card" data-card="7"></div>
+          <div class="card" data-card="8"></div>
+        </div>
+        <div class="plate">
+          <div class="card" data-card="9"></div>
+          <div class="card" data-card="10"></div>
+        </div>
+      </div>
+
+      <div class="back-side">
+        <div class="plate">
+          <div class="card" data-image="2"></div>
+          <div class="card" data-image="1"></div>
+        </div>
+        <div class="plate">
+          <div class="card" data-image="4"></div>
+          <div class="card" data-image="3"></div>
+        </div>
+        <div class="plate">
+          <div class="card" data-image="6"></div>
+          <div class="card" data-image="5"></div>
+        </div>
+        <div class="plate">
+          <div class="card" data-image="8"></div>
+          <div class="card" data-image="7"></div>
+        </div>
+        <div class="plate">
+          <div class="card" data-image="10"></div>
+          <div class="card" data-card="9"></div>
+        </div>
+      </div>
+      <!-- <div class="col-md-9 canvas"></div> -->
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("img").on("error", function () {
+        $(this).hide();
+      });
+
+      function printFrontPage(file) {
+        let numberOfCopies = $("#copy").val();
+
+        for (let i = 1; i <= numberOfCopies; i++) {
+          let imageDiv = $("<img>");
+          imageDiv.attr("src", file);
+
+          let card = $(`[data-card=${i}]`);
+          card.append(imageDiv);
+        }
+      }
+      function printBackPage(file) {
+        let numberOfCopies = $("#copy").val();
+
+        for (let i = 1; i <= numberOfCopies; i++) {
+          let imageDiv = $("<img>");
+          imageDiv.attr("src", file);
+
+          let card = $(`[data-image=${i}]`);
+          card.append(imageDiv);
+        }
+      }
+
+      function generate() {
+        // Working On Front Image
+        const input = $("#front-image")[0]; // Get the DOM element
+
+        if (input.files && input.files[0]) {
+          const reader = new FileReader();
+
+          reader.onload = function (e) {
+            let file = e.target.result;
+            printFrontPage(file);
+          };
+
+          // Read the image file as a data URL
+          reader.readAsDataURL(input.files[0]);
+        }
+
+        // Working on Back Image
+
+        const input2 = $("#back-image")[0]; // Get the DOM element
+
+        if (input2.files && input2.files[0]) {
+          const reader = new FileReader();
+
+          reader.onload = function (e) {
+            let file = e.target.result;
+            printBackPage(file);
+          };
+
+          // Read the image file as a data URL
+          reader.readAsDataURL(input2.files[0]);
+        }
+      }
+
+      function flipPage() {
+        document.querySelector(".front-side").classList.toggle("active");
+        document.querySelector(".back-side").classList.toggle("active");
+      }
+      function printFront() {
+        window.print();
+      }
+    </script>
+  </body>
+</html>
