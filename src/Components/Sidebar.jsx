@@ -37,7 +37,7 @@ const Sidebar = ({side,setSide,count,setCount,setFrontImage,setBackImage}) => {
         <div className='sidebar print:hidden w-[400px] min-h-full fixed flex flex-col p-4'>
             <div className="bg-slate-300 w-100 flex-grow shadow-lg rounded p-3  flex flex-col justify-between   ">
                 <div>
-                    <h1 className='text-xl font-semibold flex items-center gap-2 mt-1'><box-icon name='printer' color="blue"></box-icon> Card Printify</h1>
+                    <h1 className='text-xl font-semibold flex items-center gap-2 mt-1'><box-icon name='printer' color="blue"></box-icon> Print Cardify</h1>
                     <div className='mt-32'>
                         <div className="form-block">
                             <label className='font-medium'>Front Side</label>
