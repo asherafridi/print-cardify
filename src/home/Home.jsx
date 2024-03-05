@@ -5,6 +5,7 @@ const Home = () => {
   return (
     <div>
     <Link to="front-back-card" >Front Back Card</Link>
+    <br />
         <Link to="passport-photo" >Passport Photo</Link>
     </div>
   )

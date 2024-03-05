@@ -35,7 +35,7 @@ const Sidebar = ({side,setSide,count,setCount,setFrontImage,setBackImage}) => {
     }
     return (
 
-        <div className='sidebar print:hidden w-[400px] min-h-full fixed flex flex-col p-4'>
+        <div className='sidebar print:hidden w-full md:w-[400px] min-h-dvh md:min-h-full lg:fixed flex flex-col p-4'>
             <div className="bg-slate-300 w-100 flex-grow shadow-lg rounded p-3  flex flex-col justify-between   ">
                 <div>
                     <Link to="/" className='text-xl font-semibold flex items-center gap-2 mt-1'><box-icon name='printer' color="blue"></box-icon> Print Cardify</Link>

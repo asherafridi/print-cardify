@@ -12,9 +12,9 @@ const FrontBackCard = () => {
 
   return (
     
-    <div className='bg-gray-200 w-100 min-h-dvh flex box-border'>
+    <div className='bg-gray-200 w-100 min-h-dvh md:flex box-border'>
       <Sidebar side={side} setSide={setSide} count={count} setCount={setCount} setFrontImage={setFrontImage} setBackImage={setBackImage}/>
-      <div className='print:p-0  pl-[400px] w-full flex justify-center py-4'>
+      <div className='print:p-0 hidden pl-[400px] w-full md:flex justify-center py-4'>
       <Paper side={side} frontImage={frontImage} backImage={backImage} count={count} />
       </div>
     
