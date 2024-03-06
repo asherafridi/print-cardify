@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <div>
-    <Link to="front-back-card" >Front Back Card</Link>
+
+      1. <Link to="front-back-card" >Front Back Card</Link>
     <br />
-        <Link to="passport-photo" >Passport Photo</Link>
+        2. <Link to="passport-photo" >Passport Photo</Link>
     </div>
   )
 }
