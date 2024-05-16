@@ -10,15 +10,17 @@ const Paper = ({ count, image }) => {
         }}>
             {Array.from({ length: count }, (i) => (
 
-                <div className='w-[35mm] h-[45mm] ' style={{
-                    backgroundImage: `url(${image})`,
-                    backgroundSize: 'contain',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center'
-                }}></div>
+                <img src={image} className='w-[35mm] h-[45mm] object-contain'  / >
 ))}
         </div>
     )
 }
+
+// style={{
+//     backgroundImage: `url(${image})`,
+//     backgroundSize: 'contain',
+//     backgroundRepeat: 'no-repeat',
+//     backgroundPosition: 'center'
+// }}
 
 export default Paper
