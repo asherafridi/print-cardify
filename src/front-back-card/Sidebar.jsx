@@ -11,6 +11,7 @@ const Sidebar = ({side,setSide,count,setCount,setFrontImage,setBackImage}) => {
     }
     
     function handleCountChange(event) {
+        
         setCount(event.target.value);
     }
     function handleFrontFileChange(e){
@@ -50,7 +51,13 @@ const Sidebar = ({side,setSide,count,setCount,setFrontImage,setBackImage}) => {
                         </div>
                         <div className="form-block mt-3">
                             <label className='font-medium'># of Copies</label>
-                            <input type="number" min="1" value={count} onChange={handleCountChange}  max="10" className='border py-2 border-slate-600 mt-1 w-full rounded p-2 bg-slate-200' />
+                            <select onChange={handleCountChange} className='outline-none border py-2 border-slate-600 mt-1 w-full rounded p-2 bg-slate-200' >
+                                <option value={2}>2</option>
+                                <option value={4}>4</option>
+                                <option value={6}>6</option>
+                                <option value={8}>8</option>
+                                <option value={10}>10</option>
+                            </select>
                         </div>
                         {/* <div className="form-block mt-3">
                             <button className='bg-blue-600 hover:bg-blue-500 w-full py-3 text-white rounded'>Generate</button>
