@@ -12,9 +12,11 @@ const Sidebar = ({setCount, setImage}) => {
             setImage(imageUrl); // Set the selected image URL
         }
     }
-    function print(){
-        window.print();
-    }
+    function print() {
+  if (typeof window !== "undefined") {
+    window.print();
+  }
+}
     function reset(){
         setImage(null);
     }

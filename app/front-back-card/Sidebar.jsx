@@ -6,9 +6,11 @@ const Sidebar = ({side,setSide,count,setCount,setFrontImage,setBackImage}) => {
     function toggleSide(){
         side==="front" ? setSide('back'): setSide('front');
     }
-    function print(){
-        window.print();
-    }
+    function print() {
+  if (typeof window !== "undefined") {
+    window.print();
+  }
+}
     
     function handleCountChange(event) {
         
