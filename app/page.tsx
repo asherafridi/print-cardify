@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import HeroBg from '@/public/assets/hero-bg.svg'
 import frontBackImg from '@/public/assets/front-back-card-img.png'
 import passportImg from '@/public/assets/passport-img.png'
 import Image from 'next/image'
