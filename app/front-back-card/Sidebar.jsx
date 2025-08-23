@@ -8,7 +8,7 @@ const Sidebar = ({side,setSide,count,setCount,setFrontImage,setBackImage}) => {
     }
     function print() {
   if (typeof window !== "undefined") {
-    window.print();
+    // window.print();
   }
 }
     
