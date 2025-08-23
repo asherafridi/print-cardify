@@ -7,7 +7,7 @@ const Sidebar = ({ side, setSide, count, setCount, setFrontImage, setBackImage }
         side === "front" ? setSide('back') : setSide('front');
     }
     function print() {
-        // window.print();
+        window.print();
 
     }
 

@@ -1,8 +1,12 @@
 "use client"
 import React from 'react'
-import Sidebar from './Sidebar'
 import Paper from './Paper'
 import { useState } from 'react'
+import dynamic from 'next/dynamic'
+
+
+
+const Sidebar = dynamic(() => import("./Sidebar"), { ssr: false });
 
 const PassportPhoto = () => {
   const [count,setCount] = useState(4);

@@ -1,8 +1,10 @@
 "use client"
 import React from 'react'
 import Paper from './Paper.jsx'
-import Sidebar from './Sidebar.jsx'
 import { useState } from 'react'
+import dynamic from 'next/dynamic.js';
+
+const Sidebar = dynamic(() => import("./Sidebar"), { ssr: false });
 
 const FrontBackCard = () => {
     

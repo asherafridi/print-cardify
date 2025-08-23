@@ -13,9 +13,7 @@ const Sidebar = ({setCount, setImage}) => {
         }
     }
     function print() {
-  if (typeof window !== "undefined") {
     // window.print();
-  }
 }
     function reset(){
         setImage(null);
