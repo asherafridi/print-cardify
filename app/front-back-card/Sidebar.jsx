@@ -2,35 +2,34 @@
 import React from 'react'
 import 'boxicons'
 
-const Sidebar = ({side,setSide,count,setCount,setFrontImage,setBackImage}) => {
-    function toggleSide(){
-        side==="front" ? setSide('back'): setSide('front');
+const Sidebar = ({ side, setSide, count, setCount, setFrontImage, setBackImage }) => {
+    function toggleSide() {
+        side === "front" ? setSide('back') : setSide('front');
     }
     function print() {
-  if (typeof window !== "undefined") {
-    // window.print();
-  }
-}
-    
+        // window.print();
+
+    }
+
     function handleCountChange(event) {
-        
+
         setCount(event.target.value);
     }
-    function handleFrontFileChange(e){
+    function handleFrontFileChange(e) {
         const file = e.target.files[0]; // Get the first file from the selected files
         if (file) {
             const imageUrl = URL.createObjectURL(file); // Create a URL for the selected file
             setFrontImage(imageUrl); // Set the selected image URL
         }
     }
-    function handleBackFileChange(e){
+    function handleBackFileChange(e) {
         const file = e.target.files[0]; // Get the first file from the selected files
         if (file) {
             const imageUrl = URL.createObjectURL(file); // Create a URL for the selected file
             setBackImage(imageUrl); // Set the selected image URL
         }
     }
-    function reset(){
+    function reset() {
         setSide("front");
         setFrontImage(null);
         setBackImage(null);
@@ -66,7 +65,7 @@ const Sidebar = ({side,setSide,count,setCount,setFrontImage,setBackImage}) => {
                         </div> */}
                         <div className="flex justify-between gap-2 mt-5">
                             <button className='flex-grow bg-green-700 py-2 hover:bg-green-600 rounded text-white  flex items-center justify-center gap-3' onClick={print}><box-icon name='printer' color="white"></box-icon>Print</button>
-                            <button className='flex-grow bg-slate-700 py-2 hover:bg-slate-600  rounded text-white flex items-center justify-center gap-3'  onClick={toggleSide}><box-icon name='reflect-vertical' color="white"></box-icon>Flip</button>
+                            <button className='flex-grow bg-slate-700 py-2 hover:bg-slate-600  rounded text-white flex items-center justify-center gap-3' onClick={toggleSide}><box-icon name='reflect-vertical' color="white"></box-icon>Flip</button>
                         </div>
                     </div>
                 </div>
