@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 export function FeaturesSection() {
   const router = useRouter();
   return (
-    <section id="features" className="py-20 bg-slate-200 relative overflow-hidden">
+    <section id="features" className="py-20 bg-white relative overflow-hidden">
           {/* Background decoration */}
           
           
@@ -34,7 +34,7 @@ export function FeaturesSection() {
             {/* Generator Cards */}
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
               {/* CNIC Generator Card */}
-              <div className="group bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-white/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="group bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-white text-2xl">🆔</span>
                 </div>
@@ -55,7 +55,7 @@ export function FeaturesSection() {
               </div>
 
               {/* Passport Generator Card */}
-              <div className="group bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-white/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="group bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-white text-2xl">📸</span>
                 </div>
