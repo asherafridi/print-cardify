@@ -1,4 +1,3 @@
-import Navbar from '@/components/Navbar'
 import {Footer} from '@/components/Footer'
 import frontBackImg from '@/public/assets/front-back-card-img.png'
 import passportImg from '@/public/assets/passport-img.png'
