@@ -9,7 +9,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Automate Front Back Card Print | Print Cardify",
+  title: "Create Perfect Print Layouts Instantly | Print Cardify",
   description: "Automatic front/back card printing layout and passport photo bunch printing layout with seamless quality, fast delivery, and streamlined operations.",
 };
 
