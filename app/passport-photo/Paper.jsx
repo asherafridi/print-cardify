@@ -20,7 +20,7 @@ const ModernPassportPaper = ({ count, image }) => {
         {Array.from({ length: count }, (_, index) => (
           <div 
             key={index}
-            className="w-[35mm] h-[45mm] bg-white border border-slate-200 rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+            className="w-[35mm] h-[45mm] bg-white   overflow-hidden  transition-shadow duration-300"
           >
             {image ? (
               <img 
