@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 export function FeaturesSection() {
   const router = useRouter();
   return (
-    <section id="features" className="py-20 bg-white relative overflow-hidden">
+    <section id="features" className="py-20 bg-slate-200 relative overflow-hidden">
           {/* Background decoration */}
           
           
