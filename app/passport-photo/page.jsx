@@ -19,7 +19,7 @@ import {
 import { useRouter } from 'next/navigation';
 
 
-const ModernPassportGenerator = ({ onBack }) => {
+const page = () => {
   const router= useRouter();
   const [count, setCount] = useState(4);
   const [image, setImage] = useState(null);
@@ -189,4 +189,4 @@ const ModernPassportGenerator = ({ onBack }) => {
   );
 };
 
-export default ModernPassportGenerator;
+export default page;
