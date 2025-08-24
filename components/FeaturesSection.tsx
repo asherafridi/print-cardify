@@ -9,10 +9,7 @@ export function FeaturesSection() {
   return (
     <section id="features" className="py-20 bg-white relative overflow-hidden">
           {/* Background decoration */}
-          <div className="absolute inset-0">
-            <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-violet-300/30 to-purple-300/30 rounded-full filter blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-10 right-10 w-40 h-40 bg-gradient-to-r from-cyan-300/30 to-blue-300/30 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
-          </div>
+          
           
           <div className="container mx-auto px-4 text-center relative z-10">
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm text-violet-700 px-4 py-2 rounded-full mb-6 border border-violet-200/50">
