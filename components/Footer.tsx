@@ -68,13 +68,13 @@ export function Footer() {
             {/* Social links */}
             <div className="flex gap-3">
               {[
-                { icon: Github, color: "hover:text-violet-400 hover:bg-violet-500/20" },
-                { icon: Twitter, color: "hover:text-cyan-400 hover:bg-cyan-500/20" },
-                { icon: Instagram, color: "hover:text-pink-400 hover:bg-pink-500/20" }
+                { icon: Github, color: "hover:text-violet-400 hover:bg-violet-500/20",href :"https://github.com/asherafridi" },
+                { icon: Twitter, color: "hover:text-cyan-400 hover:bg-cyan-500/20",href:"https://x.com/AshirKhanAfridi" },
+                { icon: Instagram, color: "hover:text-pink-400 hover:bg-pink-500/20",href:"https://www.instagram.com/afridiashir/" }
               ].map((social, index) => {
                 const SocialIcon = social.icon;
                 return (
-                  <a key={index} href="#" className={`w-10 h-10 bg-slate-700/50 rounded-lg flex items-center justify-center text-slate-400 ${social.color} transition-all duration-300 hover:scale-110`}>
+                  <a key={index} href={social.href} className={`w-10 h-10 bg-slate-700/50 rounded-lg flex items-center justify-center text-slate-400 ${social.color} transition-all duration-300 hover:scale-110`}>
                     <SocialIcon className="w-5 h-5" />
                   </a>
                 );

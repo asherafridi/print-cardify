@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 export function FeaturesSection() {
   const router = useRouter();
   return (
-    <section id="features" className="py-20 bg-gradient-to-br from-violet-50 to-cyan-50 relative overflow-hidden">
+    <section id="features" className="py-20 bg-white relative overflow-hidden">
           {/* Background decoration */}
           <div className="absolute inset-0">
             <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-violet-300/30 to-purple-300/30 rounded-full filter blur-3xl animate-pulse"></div>
